@@ -5,6 +5,9 @@
 
 import java.util.Scanner;
 
+import java.awt.*;
+import java.awt.geom.*;
+
 public class Circle extends Shape {
     private float radius;
     
@@ -40,6 +43,11 @@ public class Circle extends Shape {
     
     // To draw the circle
     public void draw() {
-        
+        /*
+        Canvas canvas = Canvas.getCanvas();
+        canvas.draw(this, "blue", new Ellupse2D.Float(x position, y position, diameter, diameter)); 
+
+        // remember to use the AWT's eclipse/circle to draw the circle on Canvas.
+        */
     }
 }

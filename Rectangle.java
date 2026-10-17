@@ -5,6 +5,9 @@
 
 import java.util.Scanner;
 
+import java.awt.*;
+import java.awt.geom.*;
+
 public class Rectangle extends Shape {
     private float length;
     private float width;
@@ -44,6 +47,9 @@ public class Rectangle extends Shape {
     
     // To draw the rectangle
     public void draw() {
-        
+        /*
+        Canvas canvas = Canvas.getCanvas();
+        canvas.draw(this, [color], new Ellupse2D.Float(x position, y position, width, length));
+        */
     }
 }
