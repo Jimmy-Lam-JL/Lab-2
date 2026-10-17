@@ -10,7 +10,6 @@ public class Rectangle extends Shape {
     private float width;
     
     public Rectangle() {
-        
     }
     
     public Rectangle(float l, float w) {
@@ -29,16 +28,22 @@ public class Rectangle extends Shape {
     
     // To compute the shape’s area
     public void computeArea() {
-        
+        super.area = length * width;
     }
     
     // To compute the shape’s perimeter
     public void computePerimeter() {
-        
+        super.perimeter = 2 * (length + width);
     }
     
     // To display the area and perimeter of the shape
     public void displayShape() {
+        System.out.println("Area of rectangle = " + super.area);
+        System.out.println("Perimeter of rectangle = " + super.perimeter);
+    }
+    
+    // To draw the rectangle
+    public void draw() {
         
     }
 }

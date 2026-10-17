@@ -9,7 +9,6 @@ public class Square extends Shape {
     private float length;
     
     public Square() {
-        
     }
     
     public Square(float l) {
@@ -25,16 +24,22 @@ public class Square extends Shape {
     
     // To compute the shape’s area
     public void computeArea() {
-        
+        super.area = length * length;
     }
     
     // To compute the shape’s perimeter
     public void computePerimeter() {
-        
+        super.perimeter = length * 4;
     }
     
     // To display the area and perimeter of the shape
     public void displayShape() {
+        System.out.println("Area of square = " + super.area);
+        System.out.println("Perimeter of square = " + super.perimeter);
+    }
+    
+    // To draw the square
+    public void draw() {
         
     }
 }

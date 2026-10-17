@@ -9,7 +9,6 @@ public class Circle extends Shape {
     private float radius;
     
     public Circle() {
-        
     }
     
     public Circle(float r) {
@@ -25,16 +24,22 @@ public class Circle extends Shape {
     
     // To compute the shape’s area
     public void computeArea() {
-        
+        super.area = 3.14 * radius * radius; // 3.14 to be replaced by PI later
     }
     
     // To compute the shape’s perimeter
     public void computePerimeter() {
-        
+        super.perimeter = 2 * 3.14 * radius;
     }
     
     // To display the area and perimeter of the shape
     public void displayShape() {
+        System.out.println("Area of circle = " + super.area);
+        System.out.println("Perimeter of circle = " + super.perimeter);
+    }
+    
+    // To draw the circle
+    public void draw() {
         
     }
 }
