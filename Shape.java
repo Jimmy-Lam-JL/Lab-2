@@ -4,8 +4,8 @@
  */
 
 public abstract class Shape implements Drawable {
-    protected double area;
-    protected double perimeter;
+    protected float area;
+    protected float perimeter;
     
     /**
      * Abstract methods for objects of class Shape

@@ -17,19 +17,19 @@ public class Circle extends Shape {
     
     // To read the shape information from users
     public void readShape() {
-        System.out.println("Please input the radius:");
         Scanner input = new Scanner(System.in);
-        radius = input.nextFloat();
+        System.out.println("Please input the radius: ");
+        this.radius = input.nextFloat();
     }
     
     // To compute the shape’s area
     public void computeArea() {
-        super.area = 3.14 * radius * radius; // 3.14 to be replaced by PI later
+        super.area = (float)(3.14 * radius * radius); // 3.14 to be replaced by PI later
     }
     
     // To compute the shape’s perimeter
     public void computePerimeter() {
-        super.perimeter = 2 * 3.14 * radius;
+        super.perimeter = (float)(2 * 3.14 * radius);
     }
     
     // To display the area and perimeter of the shape
