@@ -33,13 +33,13 @@ public class Picture {
     
     public void listAllShapeTypes() {
         for (Shape shape : shapes) {
-            if (shape instanceof Circle){
+            if (shape instanceof Circle) {
                 ((Circle)shape).displayShape();
                 ((Circle)shape).draw();
-            }else if (shape instanceof Square){
+            } else if (shape instanceof Square) {
                 ((Square)shape).displayShape();
                 ((Square)shape).draw();
-            }else if (shape instanceof Rectangle){
+            } else if (shape instanceof Rectangle) {
                 ((Rectangle)shape).displayShape();
                 ((Rectangle)shape).draw();
             }
@@ -48,13 +48,13 @@ public class Picture {
     
     public void listSingleShapeType(String className) {
         for (Shape shape : shapes) {
-            if (shape instanceof Circle && className == "Circle"){
+            if (shape instanceof Circle && className == "Circle") {
                 ((Circle)shape).displayShape();
                 ((Circle)shape).draw();
-            }else if (shape instanceof Square && className == "Square"){
+            } else if (shape instanceof Square && className == "Square") {
                 ((Square)shape).displayShape();
                 ((Square)shape).draw();
-            }else if (shape instanceof Rectangle && className == "Rectangle"){
+            } else if (shape instanceof Rectangle && className == "Rectangle") {
                 ((Rectangle)shape).displayShape();
                 ((Rectangle)shape).draw();
             }

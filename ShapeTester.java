@@ -14,13 +14,11 @@ public class ShapeTester {
             for (int i = 0; i < 41; i++)
                 System.out.print("*");
             System.out.println("");
-            
             System.out.println("* Please choose one of the followings:  *");
             System.out.println("* Press 'c' - Circle                    *");
-            System.out.println("* Press 's' - Squar                     *");
+            System.out.println("* Press 's' - Square                    *");
             System.out.println("* Press 'r' - Rectangle                 *");
             System.out.println("* Press 'x' - EXIT                      *");
-            
             for (int i = 0; i < 41; i++)
                 System.out.print("*");
             System.out.println("");

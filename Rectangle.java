@@ -4,7 +4,6 @@
  */
 
 import java.util.Scanner;
-
 import java.awt.*;
 
 public class Rectangle extends Shape {
@@ -24,7 +23,7 @@ public class Rectangle extends Shape {
         System.out.println("Please input the length:");
         Scanner input = new Scanner(System.in);
         length = input.nextFloat();
-        System.out.println("Please input the length:");
+        System.out.println("Please input the width:");
         width = input.nextFloat();
     }
     

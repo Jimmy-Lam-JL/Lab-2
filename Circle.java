@@ -4,7 +4,6 @@
  */
 
 import java.util.Scanner;
-
 import java.awt.*;
 import java.awt.geom.*;
 
@@ -28,17 +27,13 @@ public class Circle extends Shape {
     // To compute the shape’s area
     public void computeArea() {
         float pi = (float) Math.PI;
-        super.area = pi * radius * radius;  // 3.14 to be replaced by PI later
-        
-        // super.area = 3.14 * radius * radius; 
+        super.area = pi * radius * radius;
     }
     
     // To compute the shape’s perimeter
     public void computePerimeter() {
         float pi = (float) Math.PI;
         super.perimeter = 2 * pi * radius;
-        
-        // super.perimeter = 2 * 3.14 * radius;
     }
     
     // To display the area and perimeter of the shape

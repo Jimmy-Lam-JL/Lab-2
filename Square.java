@@ -4,7 +4,6 @@
  */
 
 import java.util.Scanner;
-
 import java.awt.*;
 
 public class Square extends Shape {
@@ -44,7 +43,6 @@ public class Square extends Shape {
     public void draw() {
         Canvas canvas = Canvas.getCanvas();
         // (this, "color", x pos, y pos, size, size)
-        canvas.draw(this, "blue", new java.awt.Rectangle(100, 100, (int)(length), (int)(length))); 
-    
+        canvas.draw(this, "blue", new java.awt.Rectangle(100, 100, (int)(length), (int)(length)));
     }
-    }
+}
