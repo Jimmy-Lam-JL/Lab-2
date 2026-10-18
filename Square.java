@@ -6,7 +6,6 @@
 import java.util.Scanner;
 
 import java.awt.*;
-import java.awt.geom.*;
 
 public class Square extends Shape {
     private float length;
@@ -20,8 +19,8 @@ public class Square extends Shape {
     
     // To read the shape information from users
     public void readShape() {
-        System.out.println("Please input the length:");
         Scanner input = new Scanner(System.in);
+        System.out.println("Please input the length:");
         length = input.nextFloat();
     }
     
@@ -43,9 +42,9 @@ public class Square extends Shape {
     
     // To draw the square
     public void draw() {
-        /*
         Canvas canvas = Canvas.getCanvas();
-        canvas.draw(this, [color], new Ellupse2D.Float(x position, y position, size, size)); 
-        */
+        // (this, "color", x pos, y pos, size, size)
+        canvas.draw(this, "blue", new java.awt.Rectangle(100, 100, (int)(length), (int)(length))); 
+    
     }
     }

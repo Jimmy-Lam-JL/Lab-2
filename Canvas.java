@@ -14,11 +14,6 @@ import java.util.*;
  * @version: 1.6 (shapes)
  */
 public class Canvas {
-    // Note: The implementation of this class (specifically the handling of
-    // shape identity and colors) is slightly more complex than necessary. This
-    // is done on purpose to keep the interface and instance fields of the
-    // shape objects in this project clean and simple for educational purposes.
-
     private static Canvas canvasSingleton;
 
     /**
@@ -27,7 +22,7 @@ public class Canvas {
     public static Canvas getCanvas() {
         if(canvasSingleton == null) {
             canvasSingleton = new Canvas("BlueJ Shapes Demo", 300, 300, 
-                                         Color.white);
+                                       Color.white);
         }
         canvasSingleton.setVisible(true);
         return canvasSingleton;
@@ -45,10 +40,6 @@ public class Canvas {
     
     /**
      * Create a Canvas.
-     * @param title  title to appear in Canvas Frame
-     * @param width  the desired width for the canvas
-     * @param height  the desired height for the canvas
-     * @param bgClour  the desired background colour of the canvas
      */
     private Canvas(String title, int width, int height, Color bgColour) {
         frame = new JFrame();
@@ -58,21 +49,16 @@ public class Canvas {
         canvas.setPreferredSize(new Dimension(width, height));
         backgroundColour = bgColour;
         frame.pack();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         objects = new ArrayList();
         shapes = new HashMap();
     }
 
     /**
      * Set the canvas visibility and brings canvas to the front of screen
-     * when made visible. This method can also be used to bring an already
-     * visible canvas to the front of other windows.
-     * @param visible  boolean value representing the desired visibility of
-     * the canvas (true or false) 
      */
     public void setVisible(boolean visible) {
         if(graphic == null) {
-            // first time: instantiate the offscreen image and fill it with
-            // the background colour
             Dimension size = canvas.getSize();
             canvasImage = canvas.createImage(size.width, size.height);
             graphic = (Graphics2D)canvasImage.getGraphics();
@@ -85,14 +71,8 @@ public class Canvas {
 
     /**
      * Draw a given shape onto the canvas.
-     * @param  referenceObject  an object to define identity for this shape
-     * @param  color            the color of the shape
-     * @param  shape            the shape object to be drawn on the canvas
      */
-     // Note: this is a slightly backwards way of maintaining the shape
-     // objects. It is carefully designed to keep the visible shape interfaces
-     // in this project clean and simple for educational purposes.
-    public void draw(Object referenceObject, String color, Shape shape) {
+    public void draw(Object referenceObject, String color, java.awt.Shape shape) {
         objects.remove(referenceObject);   // just in case it was already there
         objects.add(referenceObject);      // add at the end
         shapes.put(referenceObject, new ShapeDescription(shape, color));
@@ -101,7 +81,6 @@ public class Canvas {
  
     /**
      * Erase a given shape's from the screen.
-     * @param  referenceObject  the shape object to be erased 
      */
     public void erase(Object referenceObject) {
         objects.remove(referenceObject);   // just in case it was already there
@@ -111,7 +90,6 @@ public class Canvas {
 
     /**
      * Set the foreground colour of the Canvas.
-     * @param  newColour   the new colour for the foreground of the Canvas 
      */
     public void setForegroundColor(String colorString) {
         if(colorString.equals("red"))
@@ -134,9 +112,6 @@ public class Canvas {
 
     /**
      * Wait for a specified number of milliseconds before finishing.
-     * This provides an easy way to specify a small delay which can be
-     * used when producing animations.
-     * @param  milliseconds  the number 
      */
     public void wait(int milliseconds) {
         try {
@@ -148,7 +123,7 @@ public class Canvas {
     }
 
     /**
-     * Redraw ell shapes currently on the Canvas.
+     * Redraw all shapes currently on the Canvas.
      */
     private void redraw() {
         erase();
@@ -157,7 +132,7 @@ public class Canvas {
         }
         canvas.repaint();
     }
-       
+        
     /**
      * Erase the whole canvas. (Does not repaint.)
      */
@@ -169,11 +144,9 @@ public class Canvas {
         graphic.setColor(original);
     }
 
-
     /************************************************************************
      * Inner class CanvasPane - the actual canvas component contained in the
-     * Canvas frame. This is essentially a JPanel with added capability to
-     * refresh the image drawn on it.
+     * Canvas frame.
      */
     private class CanvasPane extends JPanel {
         public void paint(Graphics g) {
@@ -182,23 +155,20 @@ public class Canvas {
     }
     
     /************************************************************************
-     * Inner class CanvasPane - the actual canvas component contained in the
-     * Canvas frame. This is essentially a JPanel with added capability to
-     * refresh the image drawn on it.
+     * Inner class ShapeDescription - stores shape and color description.
      */
     private class ShapeDescription {
-        private Shape shape;
+        private java.awt.Shape shape;
         private String colorString;
 
-        public ShapeDescription(Shape shape, String color) {
+        public ShapeDescription(java.awt.Shape shape, String color) {
             this.shape = shape;
             colorString = color;
         }
 
         public void draw(Graphics2D graphic) {
             setForegroundColor(colorString);
-            graphic.fill(java.awt.shape);
+            graphic.fill(shape);
         }
     }
-    
 }

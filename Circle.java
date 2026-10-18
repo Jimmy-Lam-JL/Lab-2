@@ -27,12 +27,18 @@ public class Circle extends Shape {
     
     // To compute the shape’s area
     public void computeArea() {
-        super.area = (float)(3.14 * radius * radius); // 3.14 to be replaced by PI later
+        float pi = (float) Math.PI;
+        super.area = pi * radius * radius;  // 3.14 to be replaced by PI later
+        
+        // super.area = 3.14 * radius * radius; 
     }
     
     // To compute the shape’s perimeter
     public void computePerimeter() {
-        super.perimeter = (float)(2 * 3.14 * radius);
+        float pi = (float) Math.PI;
+        super.perimeter = 2 * pi * radius;
+        
+        // super.perimeter = 2 * 3.14 * radius;
     }
     
     // To display the area and perimeter of the shape
@@ -43,11 +49,8 @@ public class Circle extends Shape {
     
     // To draw the circle
     public void draw() {
-        /*
         Canvas canvas = Canvas.getCanvas();
-        canvas.draw(this, "blue", new Ellupse2D.Float(x position, y position, diameter, diameter)); 
-
-        // remember to use the AWT's eclipse/circle to draw the circle on Canvas.
-        */
+        // (this, "color", x pos, y pos, diameter, diameter)
+        canvas.draw(this, "blue", new Ellipse2D.Float(10, 10, radius * 2 , radius * 2));
     }
 }

@@ -8,6 +8,10 @@ import java.util.ArrayList;
 public class Picture {
     private ArrayList<Shape> shapes;
     
+    public Picture() {
+        shapes = new ArrayList<Shape>();
+    }
+    
     public void addShape(Shape s) {
         shapes.add(s);
     }
@@ -29,23 +33,31 @@ public class Picture {
     
     public void listAllShapeTypes() {
         for (Shape shape : shapes) {
-            if (shape instanceof Circle)
+            if (shape instanceof Circle){
                 ((Circle)shape).displayShape();
-            else if (shape instanceof Square)
+                ((Circle)shape).draw();
+            }else if (shape instanceof Square){
                 ((Square)shape).displayShape();
-            else if (shape instanceof Rectangle)
+                ((Square)shape).draw();
+            }else if (shape instanceof Rectangle){
                 ((Rectangle)shape).displayShape();
+                ((Rectangle)shape).draw();
+            }
         }
     }
     
     public void listSingleShapeType(String className) {
         for (Shape shape : shapes) {
-            if (shape instanceof Circle && className == "Circle")
+            if (shape instanceof Circle && className == "Circle"){
                 ((Circle)shape).displayShape();
-            else if (shape instanceof Square && className == "Square")
+                ((Circle)shape).draw();
+            }else if (shape instanceof Square && className == "Square"){
                 ((Square)shape).displayShape();
-            else if (shape instanceof Rectangle && className == "Rectangle")
+                ((Square)shape).draw();
+            }else if (shape instanceof Rectangle && className == "Rectangle"){
                 ((Rectangle)shape).displayShape();
-        }
+                ((Rectangle)shape).draw();
+            }
+        }       
     }
 }
