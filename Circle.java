@@ -9,6 +9,7 @@ import java.awt.geom.*;
 
 public class Circle extends Shape {
     private float radius;
+    final float pi = (float) Math.PI;
     
     public Circle() {
     }
@@ -26,13 +27,11 @@ public class Circle extends Shape {
     
     // To compute the shape’s area
     public void computeArea() {
-        float pi = (float) Math.PI;
         super.area = pi * radius * radius;
     }
     
     // To compute the shape’s perimeter
     public void computePerimeter() {
-        float pi = (float) Math.PI;
         super.perimeter = 2 * pi * radius;
     }
     
