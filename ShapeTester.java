@@ -11,16 +11,20 @@ public class ShapeTester {
         String option;
 
         do {
-            for (int i = 0; i < 41; i++)
+            for (int i = 0; i < 41; i++){
                 System.out.print("*");
+            }    
             System.out.println("");
             System.out.println("* Please choose one of the followings:  *");
             System.out.println("* Press 'c' - Circle                    *");
             System.out.println("* Press 's' - Square                    *");
             System.out.println("* Press 'r' - Rectangle                 *");
             System.out.println("* Press 'x' - EXIT                      *");
-            for (int i = 0; i < 41; i++)
+            
+            for (int i = 0; i < 41; i++){
                 System.out.print("*");
+            }
+                
             System.out.println("");
             
             option = input.nextLine();
@@ -60,7 +64,7 @@ public class ShapeTester {
                     System.out.println("Invalid command!");
             }
             System.out.println();
-        } while (option == "x");
+        } while ((!option.equals( "x")));
         input.close();
     }
 }
