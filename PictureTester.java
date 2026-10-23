@@ -6,7 +6,7 @@
 public class PictureTester {
     public static void main(String[] args) {
         Picture p = new Picture();
-        p.addShape(new Square(20));
+        p.addShape(new Square(10));
         p.addShape(new Square(20));
         p.addShape(new Circle(30));
         p.addShape(new Circle(40));
