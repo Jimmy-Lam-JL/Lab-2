@@ -23,8 +23,7 @@ public class ShapeTester {
             for (int i = 0; i < 41; i++){
                 System.out.print("*");
             }
-            System.out.println("");
-            
+            System.out.print("\n\n");
             option = input.nextLine();
             switch (option) {
                 case "c":

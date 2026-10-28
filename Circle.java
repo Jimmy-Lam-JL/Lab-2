@@ -21,8 +21,10 @@ public class Circle extends Shape {
     // To read the shape information from users
     public void readShape() {
         Scanner input = new Scanner(System.in);
-        System.out.println("Please input the radius: ");
-        radius = input.nextFloat();
+        do {
+            System.out.println("Please input the radius: ");
+            radius = input.nextFloat();
+        } while (radius < 0);
     }
     
     // To compute the shape’s area

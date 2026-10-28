@@ -19,8 +19,10 @@ public class Square extends Shape {
     // To read the shape information from users
     public void readShape() {
         Scanner input = new Scanner(System.in);
-        System.out.println("Please input the length:");
-        length = input.nextFloat();
+        do {
+            System.out.println("Please input the length:");
+            length = input.nextFloat();
+        } while (length < 0);
     }
     
     // To compute the shape’s area

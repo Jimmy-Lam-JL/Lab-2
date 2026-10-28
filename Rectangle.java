@@ -20,11 +20,15 @@ public class Rectangle extends Shape {
     
     // To read the shape information from users
     public void readShape() {
-        System.out.println("Please input the length:");
         Scanner input = new Scanner(System.in);
-        length = input.nextFloat();
-        System.out.println("Please input the width:");
-        width = input.nextFloat();
+        do {
+            System.out.println("Please input the length:");
+            length = input.nextFloat();
+        } while (length < 0);
+        do {
+            System.out.println("Please input the width:");
+            width = input.nextFloat();
+        } while (width < 0);
     }
     
     // To compute the shape’s area
