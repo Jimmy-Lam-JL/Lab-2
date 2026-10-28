@@ -22,7 +22,7 @@ public class Circle extends Shape {
     public void readShape() {
         Scanner input = new Scanner(System.in);
         System.out.println("Please input the radius: ");
-        this.radius = input.nextFloat();
+        radius = input.nextFloat();
     }
     
     // To compute the shape’s area
