@@ -47,6 +47,6 @@ public class Rectangle extends Shape {
     public void draw() {
         Canvas canvas = Canvas.getCanvas();
         // (this, "color", x pos, y pos, size, size)
-        canvas.draw(this, "blue", new java.awt.Rectangle(200, 200, (int)(length), (int)(width)));
+        canvas.draw(this, "blue", new java.awt.Rectangle(200, 200, (int)length, (int)width));
     }
 }
