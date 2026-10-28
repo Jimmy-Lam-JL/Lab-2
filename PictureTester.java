@@ -3,15 +3,16 @@
  * LAU Ching Hoi (24133078D)
  */
 
-public class PictureTester {
+public class PictureTester
+{
     public static void main(String[] args) {
         Picture p = new Picture();
-        p.addShape(new Square(10));
-        p.addShape(new Square(20));
-        p.addShape(new Circle(30));
-        p.addShape(new Circle(40));
-        p.addShape(new Rectangle(50,60));
-        p.addShape(new Rectangle(70,80));
+        p.addShape(new Square(2));
+        p.addShape(new Square(2));
+        p.addShape(new Circle(3));
+        p.addShape(new Circle(4));
+        p.addShape(new Rectangle(5,6));
+        p.addShape(new Rectangle(7,8));
         p.computeShape();
         p.listAllShapeTypes();
         p.listSingleShapeType("Circle");

@@ -20,15 +20,12 @@ public class ShapeTester {
             System.out.println("* Press 's' - Square                    *");
             System.out.println("* Press 'r' - Rectangle                 *");
             System.out.println("* Press 'x' - EXIT                      *");
-            
             for (int i = 0; i < 41; i++){
                 System.out.print("*");
             }
-                
             System.out.println("");
             
             option = input.nextLine();
-            
             switch (option) {
                 case "c":
                     Circle c = new Circle();
@@ -38,7 +35,6 @@ public class ShapeTester {
                     c.displayShape();
                     c.draw();
                     break;
-                    
                 case "s":
                     Square s = new Square();
                     s.readShape();
@@ -47,7 +43,6 @@ public class ShapeTester {
                     s.displayShape();
                     s.draw();
                     break;
-                    
                 case "r":
                     Rectangle r = new Rectangle();
                     r.readShape();
@@ -56,15 +51,13 @@ public class ShapeTester {
                     r.displayShape();
                     r.draw();
                     break;
-                    
                 case "x":
                     break;
-                    
                 default:
                     System.out.println("Invalid command!");
             }
             System.out.println();
-        } while ((!option.equals( "x")));
+        } while ((!option.equals("x")));
         input.close();
     }
 }
