@@ -58,6 +58,6 @@ public class Picture {
                 ((Rectangle)shape).displayShape();
                 ((Rectangle)shape).draw();
             }
-        }       
+        }
     }
 }
